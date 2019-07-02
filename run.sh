@@ -1,9 +1,13 @@
 #!/bin/bash
+echo " 𝙀𝙙𝙞𝙩 𝘽𝙮 𝘼𝙨𝙝𝙠𝙖𝙣𝙎𝙚𝙘𝙪𝙧𝙚 "
+echo "𝙑𝙚𝙧𝙨𝙞𝙤𝙣 1.1.1 "
 date;
 echo "uptime:"
 uptime
 echo "Currently connected"
 w
+echo " Show Exim List "
+exim -bp && exim -bpc
 echo "-------------------"
 echo "Last logins:"
 last -a |head -3
@@ -13,15 +17,8 @@ df -h | xargs | awk '{print "Free/totals disk: " $23 " / "$24}'
 echo "--------------------"
 free -m |xargs | awk '{print "free/total/used disk: "$10 "/" $8 "/" $9"  MB"}'
 echo "--------------------"
-start_log=`head -1 /var/log/messages |cut -c 1-12`
-oom=`grep -ci kill /var/log/messages`
-echo -n "OOM errors since $start_log :" $oom
-echo ""
-echo "--------------------"
-echo "Utilization and most expensive processes:"
-    top -b |head -3
-echo
-	top -b |head -10 |tail -4
+#echo "Utilization and most expensive processes:"
+  top -b |head -20
 echo "--------------------"
 echo "Open TCP ports:"
 nmap -p- -T4 127.0.0.1
@@ -30,7 +27,7 @@ echo "Current connections:"
 ss -s
 echo "--------------------"
 echo "processes:"
-ps auxf --width=200
+ps auxf --width=20
 echo "--------------------"
 echo "vmstat:"
 vmstat 1 5
