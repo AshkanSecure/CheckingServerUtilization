@@ -19,3 +19,7 @@ bash run.sh
 
 3.Add Show detail Service exim
 
+4.Add Show detail Service httpd
+
+5.Add Show detail Service csf (Firewall)
+
