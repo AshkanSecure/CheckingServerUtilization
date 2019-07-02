@@ -31,3 +31,14 @@ ps auxf --width=20
 echo "--------------------"
 echo "vmstat:"
 vmstat 1 5
+echo "--------------------"
+echo " detail Service httpd "
+service httpd status
+echo "--------------------"
+echo "--------------------"
+echo " detail Service csf (FireWall)"
+service httpd status
+csf -U
+csf -v
+csf -r
+echo "--------------------"
