@@ -37,7 +37,6 @@ service httpd status
 echo "--------------------"
 echo "--------------------"
 echo " detail Service csf (FireWall)"
-service httpd status
 csf -U
 csf -v
 csf -r
