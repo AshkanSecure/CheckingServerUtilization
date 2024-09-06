@@ -1,15 +1,16 @@
 #!/bin/bash
-echo " 𝙀𝙙𝙞𝙩 𝘽𝙮 𝘼𝙨𝙝𝙠𝙖𝙣𝙎𝙚𝙘𝙪𝙧𝙚 "
-echo "𝙑𝙚𝙧𝙨𝙞𝙤𝙣 1.1.1 "
+echo " 𝙀𝙙𝙞𝙩 𝘽𝙮 SECUREMANAGER "
+echo "𝙑𝙚𝙧𝙨𝙞𝙤𝙣 1.2.0 "
+echo "Script Running...| Please Not Stop Script"
 date;
 echo "uptime:"
 uptime
 echo "Currently connected"
 w
-echo " Show Exim List "
+echo " Show Exim Service List "
 exim -bp && exim -bpc
 echo "-------------------"
-echo "Last logins:"
+echo "Show Last logins:"
 last -a |head -3
 echo "-------------------"
 echo "Disk and memory usage:"
